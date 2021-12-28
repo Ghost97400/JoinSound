@@ -9,7 +9,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\world\sound\BlazeShootSound;
+use pocketmine\world\sound\EndermanTeleportSound;
 
 class main extends PluginBase implements Listener {
 
@@ -20,7 +20,7 @@ class main extends PluginBase implements Listener {
     public function onCommand(CommandSender $sender, Command $command, string $label, Array $args) : bool {
 
         switch($command->getName()){
-            case "join sound":
+            case "joinsound":
                 if ($sender instanceof Player){
                     $sender->sendMessage("plugin fais par my name is6758");
                 }
@@ -36,6 +36,6 @@ class main extends PluginBase implements Listener {
         $z = $player->getPosition()->getz();
 
 
-        $world->addSound(new Vector3($x, $y, $z), new BlazeShootSound($player));
+        $world->addSound(new Vector3($x, $y, $z), new EndermanTeleportSound($player));
     }
 }

@@ -6,10 +6,10 @@ version: 1.0
 
 commands:
   joinsound:
-    description: "information"
-    permission: "join.sound"
-
+    description: information
+    usage: "/joinsound"
+    permission: joinsound.command.joinsound
 permissions:
-  join.sound:
-    description: "information"
-    default: op
+  joinsound.command.joinsound:
+    description: "commande pour savoir qui a fais se plugin"
+    default: true
