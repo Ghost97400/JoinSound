@@ -22,7 +22,7 @@ class main extends PluginBase implements Listener {
         switch($command->getName()){
             case "joinsound":
                 if ($sender instanceof Player){
-                    $sender->sendMessage("plugin fais par my name is6758");
+                    $sender->sendMessage("§4Plugin fais par my name is6758");
                 }
         }
     return true;
